@@ -5,6 +5,8 @@ This page explains how to compile and use exportpriv
 
 It assumes you've already downloaded the code, either from the Downloads section (http://code.google.com/p/java-exportpriv/downloads/list) or using your svn client.
 
+For more information about the procedure, alternatives and possible outcomes, see http://conshell.net/wiki/index.php/Keytool_to_OpenSSL_Conversion_tips
+
 = Details =
 == Compile ==
 Change into the folder containing the source code files.
