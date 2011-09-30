@@ -1,0 +1,23 @@
+#summary How to use ExportPriv
+= Introduction =
+
+This page explains how to use ExportPriv
+
+
+= Details =
+{{{
+java ExportPriv <keystore> <alias> <password> > exported-pkcs8.key
+
+cat exported-pkcs8.key 
+ -----BEGIN PRIVATE KEY-----MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAMKTXSLw/mT0IHfIvwXd3Mr9DSL+oOHF0Rqmfdd4Mtb
+OaMXQyk34G6/Yhx6WRthqQ62GgHwEsJayAAOWRc+ZcaueJVsoeWFJfJXxLQ7Rq6JJNL6AmCWK5rfFvAvArpXdxQ0M+w
+[...]
+yS03EKrUnMA2k8U6OpeqIZynvnFkw8Di76b0PeKacmMHK6+qdk5+MtjuXlgX0exGBNsG8ChGAPeYI7w==
+-----END PRIVATE KEY-----
+}}}
+
+By now you probably realize, the private key is being exported as PKCS#8 PEM format. To get it into the RSA format that works with Apache (see below) you can issue the following command:
+
+{{{
+openssl pkcs8 -inform PEM -nocrypt -in exported-pkcs8.key -out exported.key
+}}}
