@@ -1,0 +1,7 @@
+#summary Compilation
+
+= Introduction =
+This page explains how to compile ExportPriv
+
+= Details =
+ javac ExportPriv.java Base64Coder.java
