@@ -3,10 +3,15 @@
 
 This page explains how to compile and use exportpriv
 
+It assumes you've already downloaded the code, either from the Downloads section (http://code.google.com/p/java-exportpriv/downloads/list) or using your svn client.
 
 = Details =
 == Compile ==
-You must compile using javac.
+Change into the folder containing the source code files.
+{{{
+cd java-exportpriv/
+}}}
+You must compile using javac. This creates the .class files used by Java.
 {{{
 javac ExportPriv.java Base64Coder.java
 }}}
