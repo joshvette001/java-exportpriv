@@ -4,10 +4,6 @@
 {{{
 $ keytool -genkeypair -alias test -keystore .keystore
 Enter keystore password:  
-Keystore password is too short - must be at least 6 characters
-Enter keystore password:  
-Keystore password is too short - must be at least 6 characters
-Enter keystore password:  
 Re-enter new password: 
 What is your first and last name?
   [Unknown]:  mark
