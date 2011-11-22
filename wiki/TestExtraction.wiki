@@ -1,4 +1,7 @@
 #summary Testing procedure start to finish
+
+1. Create a keystore
+{{{
 $ keytool -genkeypair -alias test -keystore .keystore
 Enter keystore password:  
 Keystore password is too short - must be at least 6 characters
@@ -23,10 +26,17 @@ Is CN=mark, OU=none, O=none, L=none, ST=none, C=no correct?
 
 Enter key password for <test>
 	(RETURN if same as keystore password):  
+}}}
 
-
+2. Compile the .java files
+{{{
 $ cd /tmp/java-exportpriv-1.0/
 $ javac ExportPriv.java Base64Coder.java
+}}}
+
+3. Extract the test alias from the keystore
+{{{
+
 $ java ExportPriv /home/mdf/.keystore test testpw
 -----BEGIN PRIVATE KEY-----
 MIIBSwIBADCCASwGByqGSM44BAEwggEfAoGBAP1/U4EddRIpUt9KnC7s5Of2EbdS
@@ -37,3 +47,4 @@ vKtcNrhXuXmUr7v6OuqC+VdMCz0HgmdRWVeOutRZT+ZxBxCBgLRJFnEj6EwoFhO3
 zwkyjMim4TwWeotUfI0o4KOuHiuzpnWRbqN/C/ohNWLx+2J6ASQ7zKTxvqhRkImo
 g9/hWuWfBpKLZl6Ae1UlZAFMO/7PSSoEFgIUEmCYFSQIRytEiwiKjYOrwQUWxZg=
 -----END PRIVATE KEY-----
+}}}
