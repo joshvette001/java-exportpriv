@@ -1,0 +1,1 @@
+Because keytool does not provide this capability, a special Java class has been created to extract private key(s) in order to reconstruct PKCS#12 and PEM files from a keystore.
